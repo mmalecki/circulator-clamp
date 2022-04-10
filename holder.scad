@@ -11,23 +11,22 @@ module holder () {
           rotate([0, 180, 0]) {
             translate([0, rim_connector_nut_offset]) hole_through(name = rim_bolt, l = rim_bolt_length, h = rim_bolt_head);
             translate([0, -rim_connector_nut_offset]) hole_through(name = rim_bolt, l = rim_bolt_length, h = rim_bolt_head);
-            hole_through(name = rim_bolt, l = rim_bolt_length, h = 3);
           }
         }
       }
 
       translate([rim_connector_length, -(fit - 1) * rim_connector_width / 2, 0]) {
-        cube([rim_connector_length, rim_connector_width, rim_height]);
+        difference () {
+          cube([rim_connector_length, rim_connector_width, rim_height]);
+
+          translate([rim_connector_length, rim_connector_width / 2, rim_connector_inset + rim_connector_x_nut_height])
+            rotate([0, 90, 0])
+              hole_through(name = rim_bolt, l = rim_bolt_x_length, h = rim_bolt_head);
+        }
 
         translate([rim_connector_length, 0, 0]) {
-          difference () {
-            translate([0, 0, vessel_inset])
-              cube([holder_vessel_length, rim_connector_width, rim_height - vessel_inset]);
-
-            translate([holder_vessel_length / 2, rim_connector_width / 2, circulator_bolt_height])
-              rotate([0, 270, 0])
-                nutcatch_sidecut(name = circulator_bolt);
-          }
+          translate([0, 0, vessel_inset])
+            cube([holder_vessel_length, rim_connector_width, rim_height - vessel_inset]);
 
           translate([holder_vessel_length, 0, 0]) {
             difference () {

@@ -16,6 +16,7 @@ rim_connector_length = 12.5;
 
 rim_connector_inset = rim_height / 2;
 rim_connector_nut_height = (rim_height - rim_connector_inset) / 3;
+rim_connector_x_nut_height = (rim_height - rim_connector_inset) / 6;
 rim_connector_nut_offset = rim_connector_width / 3;
 
 // The actual bolt length:
@@ -24,6 +25,7 @@ rim_connector_nut_offset = rim_connector_width / 3;
 rim_bolt = "M3";
 rim_bolt_head = 3.5;
 rim_bolt_length = 25;
+rim_bolt_x_length = 16;
 
 circulator_bolt = "M5";
 circulator_bolt_height = 4/5 * rim_height;
