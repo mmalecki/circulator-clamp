@@ -22,7 +22,8 @@ rim_connector_nut_offset = rim_connector_width / 3;
 // The actual bolt length:
 // rim_bolt_length = rim_connector_inset + rim_connector_nut_height;
 // The approximation, to appease engineering gods:
-rim_bolt = "M3";
+rim_bolt_size = 3;
+rim_bolt = str("M", rim_bolt_size);
 rim_bolt_head = 3.5;
 rim_bolt_length = 25;
 rim_bolt_x_length = 16;

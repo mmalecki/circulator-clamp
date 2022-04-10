@@ -2,6 +2,13 @@ use <nutsnbolts/cyl_head_bolt.scad>;
 include <parameters.scad>;
 
 module rim () {
+  translate([rim_outer_d / 2 + rim_connector_length, 0, 0]) {
+    difference () {
+      translate([rim_connector_length, 0, rim_connector_inset + rim_connector_x_nut_height])
+        rotate([0, 90, 0])
+        hole_through(name = rim_bolt, l = rim_bolt_x_length, h = 0);
+    }
+  }
   difference () {
     hull () {
       // Chamfered cylinder:
@@ -31,7 +38,7 @@ module rim () {
 
         translate([0, 0, rim_connector_x_nut_height]) {
           rotate([0, 270, 0]) hole_through(name = rim_bolt, l = rim_bolt_x_length);
-          rotate([0, 90, 0]) nutcatch_sidecut(name = rim_bolt);
+          translate([rim_bolt_size / 2, 0, 0]) rotate([0, 90, 0]) nutcatch_sidecut(name = rim_bolt);
         }
       }
 
