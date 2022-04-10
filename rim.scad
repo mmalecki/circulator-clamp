@@ -1,5 +1,4 @@
 use <nutsnbolts/cyl_head_bolt.scad>;
-use <utils.scad>;
 include <parameters.scad>;
 
 module rim () {
