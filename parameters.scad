@@ -1,4 +1,4 @@
-$fn = 100;
+$fn = 50;
 fit = 1.01;
 
 chamfer_height = 1;
@@ -59,3 +59,8 @@ knob_head_inset = 4.5;
 knob_points = 4;
 knob_point_d = 15;
 knob_point_outset = 8;
+
+vessel_pad_h = 5.5;
+vessel_pad_top_h = 18;
+vessel_pad_top_r = 3;
+vessel_pad_d = 12;
