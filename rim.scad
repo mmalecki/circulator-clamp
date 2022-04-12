@@ -5,10 +5,10 @@ module rim () {
   difference () {
     hull () {
       // Chamfered cylinder:
-      cylinder(d1 = rim_outer_d - chamfer_inset, d2 = rim_outer_d, h = chamfer_height);
+      cylinder(d1 = rim_outer_d - 2 * chamfer_inset, d2 = rim_outer_d, h = chamfer_height);
 
       translate([0, 0, rim_height - chamfer_height])
-        cylinder(d1 = rim_outer_d, d2 = rim_outer_d - chamfer_inset, h = chamfer_height);
+        cylinder(d1 = rim_outer_d, d2 = rim_outer_d - 2 * chamfer_inset, h = chamfer_height);
 
       // The connector cube:
       translate([rim_outer_d / 2, - rim_connector_width / 2, 0])

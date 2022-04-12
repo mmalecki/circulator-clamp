@@ -1,8 +1,8 @@
 $fn = 100;
 fit = 1.01;
 
-chamfer_height = 2.5;
-chamfer_inset = 2.5;
+chamfer_height = 1;
+chamfer_inset = 1;
 
 // As per https://anovaculinary.com/sous-vide-cooler-guide/:
 circulator_outer_d = 60.325 * fit;
