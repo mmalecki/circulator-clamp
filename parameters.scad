@@ -49,3 +49,13 @@ vessel_inset = rim_height / 1.5;
 
 vessel_connector_length = 25;
 vessel_nutcatch_offset = vessel_connector_length / 6;
+
+knob_head_wall_thickness = 1.6;
+knob_head_d = 12.8 * fit;
+knob_head_slot_d = 6.68 * (1 / fit);
+knob_head_h = 7.95;
+knob_head_inset = 4.5;
+
+knob_points = 4;
+knob_point_d = 15;
+knob_point_outset = 8;
